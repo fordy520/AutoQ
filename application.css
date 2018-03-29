@@ -1,0 +1,31 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property*/ 
+
+.background {
+	-fx-background-image: url('file:/C:/Users/fordy/eclipse-workspace/AutoQ/src/images/planeBG3.jpg');
+	-fx-background-repeat: stretch;   
+    -fx-background-size: 100.0% 100.0%;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+
+}
+/* .autoQIcon {
+	-fx-background-image: url('file:/C:/Users/fordy/eclipse-workspace/AutoQ/src/images/AutoQ.png');
+	-fx-background-repeat: stretch;   
+    -fx-background-size: 100.0% 100.0%;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+}
+
+#sidePane.sidePane {
+	-fx-text-fill: white;
+    -fx-font-size: 26.0;
+    -fx-font-family: "Arial";
+	}
+	
+#sidePane.button {
+	-fx-text-fill: white;
+    -fx-font-size: 26.0;
+    -fx-font-family: "Arial";
+	}
+	
+	*/

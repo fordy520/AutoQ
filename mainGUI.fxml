@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="paneBG" fx:id="paneBG" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="897.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUI_Controller">
+	<children>
+		<AnchorPane id="paneFastTrack" fx:id="paneFastTrack" layoutX="160.0" opacity="0.88" prefHeight="629.0" prefWidth="712.0" style="-fx-background-color: #3D4956;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+		<AnchorPane id="paneHelp" fx:id="paneHelp" layoutX="160.0" opacity="0.88" prefHeight="629.0" prefWidth="712.0" style="-fx-background-color: #3D4956;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label id="lblHelpText" fx:id="lblHelpText" layoutX="37.0" layoutY="94.0" prefHeight="103.0" prefWidth="545.0" text="Please select which type of Assistance you require ?" textFill="WHITE">
+					<font>
+						<Font name="Century Gothic Bold" size="21.0" />
+					</font>
+				</Label>
+				<Label id="lblHelpMenu" fx:id="lblHelpMenu" contentDisplay="RIGHT" ellipsisString="" layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="222.0" text="Help Menu" textFill="WHITE" underline="true">
+					<graphic>
+						<FontAwesomeIconView fill="#eeeeee" glyphName="QUESTION_CIRCLE" size="50" wrappingWidth="45.999987095594406" />
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="32.0" />
+					</font>
+				</Label>
+				<JFXButton id="btnHelp_Mobility" fx:id="btnHelp_Mobility" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" layoutX="293.0" layoutY="217.0" onAction="#processHelpSelection" prefHeight="113.0" prefWidth="126.0" ripplerFill="#ff7119" style="-fx-border-color: grey;" text="  Mobility &#10;Assistance" textFill="WHITE">
+					<font>
+						<Font name="Century Gothic" size="15.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="51.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: grey;">
+							<image>
+								<Image url="@../images/icons8_Assistive_Technology_52px.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton id="btnHelp_Other" fx:id="btnHelp_Other" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" layoutX="468.0" layoutY="217.0" onAction="#processHelpSelection" prefHeight="113.0" prefWidth="126.0" ripplerFill="#ff7119" style="-fx-border-color: grey;" text="Other" textFill="WHITE">
+					<font>
+						<Font name="Century Gothic" size="15.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="66.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/icons8_Ask_Question_48px_1.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton id="btnHelp_BoardingPass" fx:id="btnHelp_BoardingPass" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" layoutX="118.0" layoutY="217.0" onAction="#processHelpSelection" prefHeight="113.0" prefWidth="126.0" ripplerFill="#ff7119" style="-fx-border-color: grey;" text="   Help with&#10;Boarding pass &#10;    " textFill="WHITE">
+					<font>
+						<Font name="Century Gothic" size="15.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="48.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/icons8_Boarding_Pass_50px.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+			</children>
+		</AnchorPane>
+		<AnchorPane id="paneHelp" fx:id="paneHelp2" layoutX="186.0" opacity="0.88" prefHeight="629.0" prefWidth="712.0" style="-fx-background-color: #3D4956;" visible="false">
+			<children>
+				<Label id="lblHelpText" fx:id="lblHelpText2" layoutX="37.0" layoutY="94.0" prefHeight="139.0" prefWidth="585.0" textFill="WHITE" AnchorPane.bottomAnchor="396.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="94.0">
+					<font>
+						<Font name="Century Gothic Bold" size="21.0" />
+					</font>
+				</Label>
+				<Label id="lblHelpMenu" fx:id="lblHelpMenu2" contentDisplay="RIGHT" ellipsisString="" layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="222.0" text="Help Menu" textFill="WHITE" underline="true">
+					<graphic>
+						<FontAwesomeIconView fill="#eeeeee" glyphName="QUESTION_CIRCLE" size="50" wrappingWidth="45.999987095594406" />
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="32.0" />
+					</font>
+				</Label>
+				<VBox fx:id="vboxStaffLogin" layoutX="245.0" layoutY="212.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="222.0" spacing="10.0" visible="false">
+					<children>
+						<Label id="lblHelpText" fx:id="lblStatus" alignment="CENTER" prefHeight="48.0" prefWidth="280.0" textFill="WHITE">
+							<font>
+								<Font name="Century Gothic Bold" size="21.0" />
+							</font>
+						</Label>
+						<JFXPasswordField fx:id="passwordStaffPin" alignment="CENTER" prefHeight="48.0" prefWidth="222.0" promptText="Staff Pin" style="-fx-background-color: #bfbbbb;">
+							<font>
+								<Font name="System Bold" size="20.0" />
+							</font>
+						</JFXPasswordField>
+						<HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+							<children>
+								<Button fx:id="btn7" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="7">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<Button fx:id="btn8" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="8">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<Button fx:id="btn9" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="9">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+							<children>
+								<Button fx:id="btn4" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="4">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<Button fx:id="btn5" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="5">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<Button fx:id="btn6" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="6">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+							<children>
+								<Button fx:id="btn1" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="1">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<Button fx:id="btn2" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="2">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<Button fx:id="btn3" mnemonicParsing="false" onAction="#processStaffLogin" prefWidth="50.0" text="3">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+							<children>
+								<JFXButton fx:id="btnClear" buttonType="RAISED" onAction="#processStaffLogin" prefHeight="44.0" prefWidth="57.0" style="-fx-background-radius: 100em; -fx-background-color: #e46611;" text="Clear" textFill="WHITE">
+									<ripplerFill>
+										<LinearGradient endX="1.0" endY="1.0">
+											<stops>
+												<Stop color="#e46611" />
+												<Stop color="WHITE" offset="1.0" />
+											</stops>
+										</LinearGradient>
+									</ripplerFill>
+								</JFXButton>
+								<Button fx:id="btn0" mnemonicParsing="false" onAction="#processStaffLogin" prefHeight="39.0" prefWidth="54.0" text="0">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Button>
+								<JFXButton fx:id="btnEnter" buttonType="RAISED" onAction="#processStaffLogin" prefHeight="44.0" prefWidth="57.0" style="-fx-background-radius: 100em; -fx-background-color: #17ab17;" text="Enter" textFill="WHITE">
+									<ripplerFill>
+										<LinearGradient endX="1.0" endY="1.0">
+											<stops>
+												<Stop color="BLACK" />
+												<Stop color="#17ab17" offset="1.0" />
+											</stops>
+										</LinearGradient>
+									</ripplerFill>
+								</JFXButton>
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+				<JFXButton id="btnContinue" fx:id="btnBeginStaffLogin" buttonType="RAISED" contentDisplay="RIGHT" layoutX="233.0" layoutY="348.0" onAction="#processStaffLogin" prefHeight="65.0" prefWidth="257.0" style="-fx-background-color: #eda678; -fx-background-radius: 100em;" text="Security Staff Login" visible="false">
+					<graphic>
+						<FontAwesomeIconView id="imgCHECK_CIRCLE" fx:id="imgCHECK_CIRCLE3" fill="WHITE" glyphName="CHECK_CIRCLE" size="30" textAlignment="RIGHT" wrappingWidth="18.80954360961914" />
+					</graphic>
+					<ripplerFill>
+						<RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+							<stops>
+								<Stop color="WHITE" />
+								<Stop color="#eda678" offset="1.0" />
+							</stops>
+						</RadialGradient>
+					</ripplerFill>
+					<font>
+						<Font size="22.0" />
+					</font>
+				</JFXButton>
+			</children>
+		</AnchorPane>
+		<AnchorPane id="paneMain" fx:id="paneMain" layoutX="160.0" opacity="0.88" prefHeight="629.0" prefWidth="712.0" style="-fx-background-color: #3D4956;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<JFXButton id="btnCancel" fx:id="btnCancel" contentDisplay="RIGHT" layoutX="195.0" layoutY="468.0" prefHeight="34.0" prefWidth="126.0" style="-fx-background-color: #515D6D; -fx-background-radius: 100em;" text="Cancel" textFill="WHITE">
+					<graphic>
+						<FontAwesomeIconView id="imgCHECK_CIRCLE" fx:id="imgCHECK_CIRCLE1" fill="WHITE" glyphName="REMOVE" size="20" textAlignment="RIGHT" wrappingWidth="16.14285659790039" />
+					</graphic>
+				</JFXButton>
+				<Label id="lblMain" fx:id="lblMain" layoutX="13.0" layoutY="84.0" prefHeight="103.0" prefWidth="692.0" text="Please select how many passengers are travelling ? &#10;&#10;" textFill="WHITE" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="84.0">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="27.0" />
+					</font>
+				</Label>
+				<HBox fx:id="hboxMain" layoutX="108.0" layoutY="210.0" prefHeight="133.0" prefWidth="496.0">
+					<children>
+						<JFXButton id="btnSingle" fx:id="btnSingle" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" graphicTextGap="0.0" prefHeight="139.0" prefWidth="162.0" ripplerFill="#eda678" style="-fx-background-radius: 100em;" text="Single" textFill="WHITE">
+							<font>
+								<Font name="Arial Rounded MT Bold" size="26.0" />
+							</font>
+							<graphic>
+								<ImageView id="imgSingle" fx:id="imgSingle" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/icons8_single.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+						<JFXButton id="btnCouple" fx:id="btnCouple" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" graphicTextGap="0.0" prefHeight="146.0" prefWidth="162.0" ripplerFill="#eda678" style="-fx-background-radius: 100em;" text="Couple" textFill="WHITE">
+							<graphic>
+								<ImageView id="imgCouple" fx:id="imgCouple" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/icons8_couple.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font name="Arial Rounded MT Bold" size="26.0" />
+							</font>
+						</JFXButton>
+						<JFXButton id="btnGroup" fx:id="btnGroup" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" graphicTextGap="0.0" prefHeight="160.0" prefWidth="162.0" ripplerFill="#eda678" style="-fx-background-radius: 100em;" text="Group +" textFill="WHITE">
+							<graphic>
+								<ImageView id="imgGroup" fx:id="imgGroup" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../images/icons8_group.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font name="Arial Rounded MT Bold" size="26.0" />
+							</font>
+						</JFXButton>
+					</children>
+				</HBox>
+				<JFXButton id="btnContinue" fx:id="btnContinue" contentDisplay="RIGHT" layoutX="392.0" layoutY="467.0" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #eda678; -fx-background-radius: 100em;" text="Continue">
+					<graphic>
+						<FontAwesomeIconView id="imgCHECK_CIRCLE" fx:id="imgCHECK_CIRCLE" fill="WHITE" glyphName="CHECK_CIRCLE" size="20" textAlignment="RIGHT" wrappingWidth="16.14285659790039" />
+					</graphic>
+				</JFXButton>
+			</children>
+		</AnchorPane>
+		<AnchorPane id="paneSettings" fx:id="paneSettings" layoutX="160.0" opacity="0.88" prefHeight="629.0" prefWidth="712.0" style="-fx-background-color: #3D4956;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label contentDisplay="RIGHT" ellipsisString="" layoutX="24.0" layoutY="14.0" prefHeight="52.0" prefWidth="222.0" text="Settings" textFill="WHITE" underline="true">
+					<graphic>
+						<ImageView id="lblSettingsTitle" fx:id="lblSettingsTitle" fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/icons8_Settings.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="32.0" />
+					</font>
+				</Label>
+				<JFXToggleButton id="toggleVoiceFeedback" fx:id="toggleVoiceFeedback" contentDisplay="RIGHT" ellipsisString="" layoutX="268.0" layoutY="66.0" onAction="#processSettings_ToggleVoiceFeedback" prefHeight="62.0" prefWidth="54.0" textFill="WHITE" toggleColor="#ff7119" toggleLineColor="#eda678">
+					<font>
+						<Font name="Century Gothic Bold" size="17.0" />
+					</font>
+				</JFXToggleButton>
+				<Label layoutX="65.0" layoutY="108.0" prefHeight="113.0" prefWidth="255.0" text="Voice Feedback is a feature to help &#10;you stay informed of which possible &#10;selections are available to choose from, &#10;aswell as confirmation on your selections.&#10;Voice feeback is played through the &#10;kiosk's speaker and is enabled by default." textFill="WHITE">
+					<font>
+						<Font name="Century Gothic" size="12.0" />
+					</font>
+				</Label>
+				<JFXSlider id="sliderVolume" fx:id="sliderVolume" disable="true" layoutX="65.0" layoutY="250.0" prefHeight="22.0" prefWidth="330.0" value="50.0" />
+				<Label layoutX="65.0" layoutY="221.0" text="Volume" textFill="WHITE">
+					<font>
+						<Font name="Century Gothic Bold" size="17.0" />
+					</font>
+				</Label>
+				<JFXSlider id="sliderBrightness" fx:id="sliderBrightness" layoutX="65.0" layoutY="316.0" prefHeight="22.0" prefWidth="330.0" value="50.0" />
+				<Label layoutX="65.0" layoutY="272.0" prefHeight="44.0" prefWidth="155.0" text="Screen Brightness" textFill="WHITE">
+					<font>
+						<Font name="Century Gothic Bold" size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="65.0" layoutY="86.0" prefHeight="22.0" prefWidth="203.0" text="Enable Voice Feedback" textFill="WHITE">
+					<font>
+						<Font name="Century Gothic Bold" size="17.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+		<AnchorPane id="paneDepartures" fx:id="paneDepartures" layoutX="185.0" opacity="0.88" prefHeight="590.0" prefWidth="712.0" style="-fx-background-color: #3D4956;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label id="lblHelpMenu" fx:id="lblHelpMenu1" contentDisplay="RIGHT" ellipsisString="" layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="222.0" text="Departures" textFill="WHITE" underline="true">
+					<font>
+						<Font name="Century Gothic Bold" size="32.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="40.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/icons8_Airplane_Take_Off_52px_1.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Label>
+				<TableView fx:id="tableDepartures" layoutX="71.0" layoutY="111.0" opacity="0.77" prefHeight="391.0" prefWidth="640.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="111.0">
+					<columns>
+						<TableColumn fx:id="time" prefWidth="79.0" text="Time" />
+						<TableColumn fx:id="destination" prefWidth="81.0" text="Destination" />
+						<TableColumn fx:id="airline" prefWidth="110.0" text="Airline" />
+						<TableColumn fx:id="flightnumber" prefWidth="87.0" text="Flight No." />
+						<TableColumn fx:id="terminal" minWidth="0.0" prefWidth="82.0" text="Terminal" />
+						<TableColumn fx:id="remarks" prefWidth="131.0" text="Remarks" />
+					</columns>
+				</TableView>
+			</children>
+		</AnchorPane>
+		<VBox id="vboxSide" fx:id="vboxSide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.96" prefHeight="590.0" prefWidth="155.0" spacing="5.0" style="-fx-background-color: #3D4956; -fx-background-repeat: stretch; -fx-background-size: 100% 100%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<JFXButton id="btnHome" fx:id="btnHome" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" onAction="#handleSideButtonAction" prefHeight="115.0" prefWidth="155.0" style="-fx-background-size: 100% 100%; -fx-background-repeat: stretch;" text="Home" textFill="#eeeeee">
+					<graphic>
+						<FontAwesomeIconView id="home" fx:id="home" fill="#eeeeee" glyphName="HOME" size="65" text="" wrappingWidth="57.42856979370117" />
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="24.0" />
+					</font>
+				</JFXButton>
+				<Line id="lineSidePane1" fx:id="lineSidePane1" endX="134.0" endY="50.0" fill="#f8f8f8" startX="3.0" startY="50.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" VBox.vgrow="NEVER">
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</Line>
+				<JFXButton id="btnDepartures" fx:id="btnDepartures" contentDisplay="TOP" ellipsisString="" onAction="#handleSideButtonAction" prefHeight="115.0" prefWidth="155.0" style="-fx-background-size: 100% 100%; -fx-background-repeat: stretch;" text="Departures &#10; Schedule" textFill="#eeeeee">
+					<graphic>
+						<ImageView fitHeight="58.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/icons8_Airplane_Take_Off_52px_1.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="17.0" />
+					</font>
+				</JFXButton>
+				<Line id="lineSidePane2" fx:id="lineSidePane2" endX="134.0" endY="50.0" fill="#f8f8f8" startX="3.0" startY="50.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND">
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</Line>
+				<JFXButton id="btnFastTrack" fx:id="btnFastTrack" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" graphicTextGap="0.0" onAction="#handleSideButtonAction" prefHeight="115.0" prefWidth="155.0" ripplerFill="#d7d7d7" style="-fx-background-size: 100% 100%; -fx-background-repeat: stretch;" text="Fast-Track" textFill="#ebbf3d">
+					<font>
+						<Font name="Century Gothic Bold Italic" size="22.0" />
+					</font>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+					<graphic>
+						<ImageView id="imgFastTrack" fx:id="imgFastTrack" fitHeight="116.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/fastman.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<Line id="lineSidePane3" fx:id="lineSidePane3" endX="130.0" endY="50.0" fill="#f8f8f8" startY="50.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND">
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</Line>
+				<JFXButton id="btnHelp" fx:id="btnHelp" contentDisplay="TOP" ellipsisString="" onAction="#handleSideButtonAction" prefHeight="115.0" prefWidth="155.0" style="-fx-background-size: 100% 100%; -fx-background-repeat: stretch;" text="Need Help" textFill="#eeeeee">
+					<graphic>
+						<FontAwesomeIconView fill="#eeeeee" glyphName="QUESTION_CIRCLE" size="55" text="" wrappingWidth="44.999987095594406" />
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="21.0" />
+					</font>
+				</JFXButton>
+				<Line id="lineSidePane4" fx:id="lineSidePane4" endX="134.0" endY="50.0" fill="#f8f8f8" startX="3.0" startY="50.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND">
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</Line>
+				<JFXButton id="btnSettings" fx:id="btnSettings" buttonType="RAISED" contentDisplay="TOP" ellipsisString="" graphicTextGap="0.0" onAction="#handleSideButtonAction" prefHeight="115.0" prefWidth="155.0" style="-fx-background-size: 100% 100%; -fx-background-repeat: stretch;" text="Settings" textFill="#cccccc">
+					<graphic>
+						<ImageView fitHeight="63.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/icons8_Settings.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<font>
+						<Font name="Century Gothic Bold" size="23.0" />
+					</font>
+				</JFXButton>
+			</children>
+		</VBox>
+		<ImageView id="imgAutoQFT" fx:id="imgAutoQFT1" fitHeight="62.0" fitWidth="64.0" layoutX="600.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="11.0">
+			<image>
+				<Image url="@../images/AutoQ.png" />
+			</image>
+		</ImageView>
+		<Label id="lblAutoQFT" fx:id="lblAutoQFT1" ellipsisString="" layoutX="540.0" layoutY="12.0" prefHeight="59.0" prefWidth="104.0" text="AutoQ" textFill="WHITE" underline="true" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="12.0">
+			<font>
+				<Font name="Century Gothic Bold Italic" size="25.0" />
+			</font>
+		</Label>
+		<Label id="lblClock" fx:id="lblClock" contentDisplay="RIGHT" ellipsisString="" layoutX="488.0" layoutY="575.0" prefHeight="52.0" prefWidth="407.0" textFill="WHITE" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0">
+			<font>
+				<Font name="Century Gothic Bold" size="32.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>
